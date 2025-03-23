@@ -16,10 +16,11 @@ int main()
     const int screenWidth = 1400;
     const int screenHeight = 1000;
     int selected_idx{};
-
+    
+    InitWindow(screenWidth, screenHeight, "GigantMony");
     Poks player("Air", "resources/air.png");
     Poks enemy("Earth", "resources/earth.png");
-    InitWindow(screenWidth, screenHeight, "GigantMony");
+    
 
 
 

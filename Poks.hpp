@@ -10,6 +10,15 @@
 #include <deque>
 
 using namespace std;
+enum Element
+{
+    Fire,
+    Water,
+    Air,
+    Earth,
+    Nature,
+    last
+};
 
 class Poks
 {

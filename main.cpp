@@ -36,10 +36,41 @@ int main()
             selected_idx--;
             selected_idx = selected_idx < 0 ? 2 : selected_idx;
         }
-        else if (IsKeyPressed(KEY_DOWN))
+        if (IsKeyPressed(KEY_DOWN))
         {
             selected_idx++;
             selected_idx = selected_idx > 2 ? 0 : selected_idx;
+        }
+        if (IsKeyPressed(KEY_ENTER))
+        {
+            string text{};
+            switch (selected_idx)
+            {
+            case 0:
+ 
+                player.attack(enemy, text);
+                update_output_queue(console_output, text);
+ 
+                enemy.attack(player, text);
+                update_output_queue(console_output, text);
+                break;
+            case 1:
+                player.defend(text);
+                update_output_queue(console_output, text);
+ 
+                enemy.attack(player, text);
+                update_output_queue(console_output, text);
+                break;
+            case 2:
+                player.special(enemy, text);
+                update_output_queue(console_output, text);
+ 
+                enemy.attack(player, text);
+                update_output_queue(console_output, text);
+                break;
+            default:
+                break;
+            }
         }
 
 

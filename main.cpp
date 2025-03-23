@@ -18,8 +18,9 @@ int main()
     int selected_idx{};
     
     InitWindow(screenWidth, screenHeight, "GigantMony");
-    Poks player("Air", "resources/air.png");
-    Poks enemy("Earth", "resources/earth.png");
+    //Poks(string name, int hp, int ad, int def, Element _el, const char *path)
+    Poks player("Air", 20, 10, 5, Element::Air,"resources/air.png");
+    Poks enemy("Earth", 20, 10, 5, Element::Earth, "resources/earth.png");
     
 
 

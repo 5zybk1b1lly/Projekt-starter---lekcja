@@ -13,10 +13,12 @@ void draw_gui(int selected);
 
 int main()
 {
-
-    int selected_idx{};
     const int screenWidth = 1400;
     const int screenHeight = 1000;
+    int selected_idx{};
+
+    Poks player("Air", "resources/air.png");
+    Poks enemy("Earth", "resources/earth.png");
     InitWindow(screenWidth, screenHeight, "GigantMony");
 
 
@@ -40,6 +42,8 @@ int main()
         BeginDrawing();
         ClearBackground(SKYBLUE);
         draw_gui(selected_idx);
+        player.render(screenWidth / 2 - 520, screenHeight / 2 - 220);
+        enemy.render(screenWidth / 2 + 150, screenHeight / 2 - 350);
 
         EndDrawing();
     }
